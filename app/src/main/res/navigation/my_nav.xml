@@ -18,5 +18,14 @@
         android:id="@+id/callFragment"
         android:name="com.example.calllog.fragment.call.CallFragment"
         android:label="@string/call"
-        tools:layout="@layout/fragment_call" />
+        tools:layout="@layout/fragment_call" >
+        <action
+            android:id="@+id/action_callFragment_to_callingFragment"
+            app:destination="@id/callingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/callingFragment"
+        android:name="com.example.calllog.fragment.calling.CallingFragment"
+        android:label="@string/calling"
+        tools:layout="@layout/fragment_calling" />
 </navigation>
