@@ -26,4 +26,5 @@
     <string name="speaker">Speaker</string>
     <string name="mute">Mute</string>
     <string name="keypad">Keypad</string>
+    <string name="endcall">EndCall</string>
 </resources>
