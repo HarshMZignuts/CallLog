@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="15dp"
+
+    tools:context=".fragment.call.CallFragment">
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+
+        android:layout_marginBottom="20dp"
+        android:text="@string/dail_your_number"
+        android:gravity="bottom|end"
+        android:id="@+id/tv_Dial_Your_Number"
+
+
+
+        android:textSize="40sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_1"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/b_1"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:theme="@style/White" />
+
+        <Button
+            android:id="@+id/btn_2"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/b_2"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:theme="@style/White" />
+
+        <Button
+            android:id="@+id/btn_3"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/b_3"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:theme="@style/White" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_4"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/b_4"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:theme="@style/White" />
+
+        <Button
+            android:id="@+id/btn_5"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/b_5"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:theme="@style/White" />
+
+        <Button
+            android:id="@+id/btn_6"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/b_6"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:theme="@style/White" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_7"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/b_7"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:theme="@style/White" />
+
+        <Button
+            android:id="@+id/btn_8"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/b_8"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:theme="@style/White" />
+
+        <Button
+            android:id="@+id/btn_9"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/b_9"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:theme="@style/White" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_has"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/b_hase"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:theme="@style/White" />
+
+        <Button
+            android:id="@+id/btn_0"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/b_0"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:theme="@style/White" />
+
+        <Button
+            android:id="@+id/btn_star"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/b_star"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:theme="@style/White" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <ImageButton
+            android:id="@+id/btn_video"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_video_call_24"
+
+            android:theme="@style/White"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/btn_blcslach"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_backspace_24"
+
+            android:theme="@style/White"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/call_floating_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:contentDescription="@string/call"
+
+        android:src="@drawable/ic_baseline_call_24"
+        app:backgroundTint="#85E615"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+    </LinearLayout>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

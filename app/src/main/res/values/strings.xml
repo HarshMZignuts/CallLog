@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">CallLog</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="phone">Phone</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="dail_your_number">Dial Your Number</string>
+    <string name="b_1">1 \n@</string>
+    <string name="b_2">2\nABC</string>
+    <string name="b_3">3\nDEF</string>
+    <string name="b_4">4\nGHI</string>
+    <string name="b_5">5\nJKL</string>
+    <string name="b_6">6\nMNO</string>
+    <string name="b_7">7\nPQRS</string>
+    <string name="b_8">8\nTUV</string>
+    <string name="b_9">9\nWXYZ</string>
+    <string name="b_hase">#</string>
+    <string name="b_0">0</string>
+    <string name="b_star">*</string>
+    <string name="call">Call</string>
+    <string name="dialed_number">Dialed Number</string>
+    <string name="timer">Timer</string>
+    <string name="add_call">Add Call</string>
+    <string name="video_call">Video Call</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="speaker">Speaker</string>
+    <string name="mute">Mute</string>
+    <string name="keypad">Keypad</string>
+</resources>
