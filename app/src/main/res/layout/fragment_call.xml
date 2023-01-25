@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.call.CallFragment">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="calViewModel"
+            type="com.example.calllog.fragment.call.CalViewModel" />
+    </data>
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="15dp"
 
-    tools:context=".fragment.call.CallFragment">
+    >
 
 
 
@@ -18,7 +27,7 @@
         android:layout_height="100dp"
 
         android:layout_marginBottom="20dp"
-        android:hint=""
+        android:text="@={calViewModel.tvnumber}"
         android:gravity="center"
         android:id="@+id/tv_Dial_Your_Number"
 
@@ -38,10 +47,11 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="@string/b_1"
-            android:onClick="numberEvent"
+            android:onClick="@{()->calViewModel.btnNumber(String.valueOf(1))}"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:theme="@style/White" />
+            android:theme="@style/White"
+             />
 
         <Button
             android:id="@+id/btn_2"
@@ -50,7 +60,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="@string/b_2"
-            android:onClick="numberEvent"
+            android:onClick="@{()->calViewModel.btnNumber(String.valueOf(2))}"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:theme="@style/White" />
@@ -62,7 +72,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="@string/b_3"
-            android:onClick="numberEvent"
+            android:onClick="@{()->calViewModel.btnNumber(String.valueOf(3))}"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:theme="@style/White" />
@@ -80,7 +90,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="@string/b_4"
-            android:onClick="numberEvent"
+            android:onClick="@{()->calViewModel.btnNumber(String.valueOf(4))}"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:theme="@style/White" />
@@ -92,7 +102,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="@string/b_5"
-            android:onClick="numberEvent"
+            android:onClick="@{()->calViewModel.btnNumber(String.valueOf(5))}"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:theme="@style/White" />
@@ -104,7 +114,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="@string/b_6"
-            android:onClick="numberEvent"
+            android:onClick="@{()->calViewModel.btnNumber(String.valueOf(6))}"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:theme="@style/White" />
@@ -122,7 +132,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="@string/b_7"
-            android:onClick="numberEvent"
+            android:onClick="@{()->calViewModel.btnNumber(String.valueOf(7))}"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:theme="@style/White" />
@@ -134,7 +144,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="@string/b_8"
-            android:onClick="numberEvent"
+            android:onClick="@{()->calViewModel.btnNumber(String.valueOf(8))}"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:theme="@style/White" />
@@ -146,7 +156,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="@string/b_9"
-            android:onClick="numberEvent"
+            android:onClick="@{()->calViewModel.btnNumber(String.valueOf(9))}"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:theme="@style/White" />
@@ -164,7 +174,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="@string/b_hase"
-            android:onClick="numberEvent"
+            android:onClick="@{()->calViewModel.btnNumber(@string/b_hase)}"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:theme="@style/White" />
@@ -176,7 +186,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="@string/b_0"
-            android:onClick="numberEvent"
+            android:onClick="@{()->calViewModel.btnNumber(String.valueOf(0))}"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:theme="@style/White" />
@@ -188,7 +198,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="@string/b_star"
-            android:onClick="numberEvent"
+            android:onClick="@{()->calViewModel.btnNumber(@string/b_star)}"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:theme="@style/White" />
@@ -219,7 +229,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:src="@drawable/ic_baseline_backspace_24"
-
+            android:onClick="@{()->calViewModel.clearDigit()}"
             android:theme="@style/White"
             android:contentDescription="@string/remove"
             tools:ignore="SpeakableTextPresentCheck" />
@@ -246,4 +256,5 @@
 
 
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</LinearLayout>
+</layout>
