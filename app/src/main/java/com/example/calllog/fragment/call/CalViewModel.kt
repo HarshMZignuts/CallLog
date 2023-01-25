@@ -1,9 +1,6 @@
 package com.example.calllog.fragment.call
 
-import android.app.usage.UsageEvents.Event
-import android.widget.Button
-import android.widget.Toast
-import androidx.databinding.Bindable
+
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 

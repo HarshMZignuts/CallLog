@@ -45,10 +45,16 @@ class CallFragment : Fragment() {
 //            findNavController().navigate(R.id.action_callFragment_to_callingFragment)
 //        }
         //initializeButtons()
-        number()
+//        number()
+        binding.callFloatingBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_callFragment_to_callingFragment)
+        }
 
         return binding.root
     }
+//    private fun number(){
+//        binding.tvDialYourNumber.text = viewModel.tvnumber.value.toString()
+//    }
 
 
 //    fun numberEvent(view: View) {
@@ -159,9 +165,7 @@ class CallFragment : Fragment() {
 //
 //
 //    }
-    private fun number(){
-        binding.tvDialYourNumber.text = viewModel.tvnumber.value.toString()
-    }
+
 
 
 }
