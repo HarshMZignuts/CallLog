@@ -230,6 +230,7 @@
             android:layout_weight="1"
             android:src="@drawable/ic_baseline_backspace_24"
             android:onClick="@{()->calViewModel.clearDigit()}"
+            android:onLongClick="@{()->calViewModel.onHoldClear()}"
             android:theme="@style/White"
             android:contentDescription="@string/remove"
             tools:ignore="SpeakableTextPresentCheck" />
@@ -248,6 +249,7 @@
         android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"
         android:contentDescription="@string/call"
+
 
         android:src="@drawable/ic_baseline_call_24"
         app:backgroundTint="#85E615"

@@ -6,22 +6,22 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.Toast
+
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import com.example.calllog.R
 import com.example.calllog.databinding.FragmentCallBinding
-import com.example.calllog.databinding.FragmentListBinding
-import com.example.calllog.fragment.calling.CallingFragment
+
 
 
 class CallFragment : Fragment() {
 
     lateinit var binding: FragmentCallBinding
-    var digit_on_screen = StringBuilder()
+//    var digit_on_screen = StringBuilder()
     lateinit var viewModel : CalViewModel
 
     override fun onCreateView(
@@ -46,11 +46,35 @@ class CallFragment : Fragment() {
 //        }
         //initializeButtons()
 //        number()
+//        binding.callFloatingBtn.setOnClickListener {
+//            findNavController().navigate(R.id.action_callFragment_to_callingFragment)
+//        }
         binding.callFloatingBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_callFragment_to_callingFragment)
+            var action = CallFragmentDirections.actionCallFragmentToCallingFragment(viewModel.tvnumber.value.toString())
+            findNavController().navigate(action)
         }
+//        viewModel.callNumber.observe(
+//            viewLifecycleOwner, Observer<Boolean>{
+//                called->
+//                if (called) callDialed()
+//            }
+//
+//        )
+
 
         return binding.root
+    }
+
+
+//    fun callDialed(){
+//        val action = CallFragmentDirections.actionCallFragmentToCallingFragment(viewModel.tvnumber.value.toString())
+//
+//        NavHostFragment.findNavController(this).navigate(action)
+//        viewModel.floatintCall()
+
+
+
+
     }
 //    private fun number(){
 //        binding.tvDialYourNumber.text = viewModel.tvnumber.value.toString()
@@ -168,4 +192,3 @@ class CallFragment : Fragment() {
 
 
 
-}

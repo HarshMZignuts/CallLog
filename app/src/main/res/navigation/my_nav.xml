@@ -27,5 +27,9 @@
         android:id="@+id/callingFragment"
         android:name="com.example.calllog.fragment.calling.CallingFragment"
         android:label="@string/calling"
-        tools:layout="@layout/fragment_calling" />
+        tools:layout="@layout/fragment_calling" >
+        <argument
+            android:name="dialnumber"
+            app:argType="string" />
+    </fragment>
 </navigation>

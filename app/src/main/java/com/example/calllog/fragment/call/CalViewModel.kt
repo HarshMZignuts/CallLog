@@ -1,6 +1,7 @@
 package com.example.calllog.fragment.call
 
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
@@ -8,7 +9,11 @@ class CalViewModel : ViewModel() {
     var digit_on_screen = StringBuilder()
 
     //    @Bindable
+
     val tvnumber = MutableLiveData<String>()
+    private val _callNumber = MutableLiveData<Boolean>()
+    val callNumber : LiveData<Boolean>
+    get() = _callNumber
 
 
     fun btnNumber(digit: String) {
@@ -37,9 +42,22 @@ class CalViewModel : ViewModel() {
         }
 
 
+
+    }
+    fun onHoldClear(): Boolean {
+        val length = digit_on_screen.length
+        if(length == 0){
+
+        }
+        else{
+            digit_on_screen.delete(0,length)
+            tvnumber.value = digit_on_screen.toString()
+
+        }
+        return true
     }
     fun floatintCall()
     {
-
+        _callNumber.value = true
     }
 }
