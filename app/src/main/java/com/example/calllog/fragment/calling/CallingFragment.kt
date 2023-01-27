@@ -23,11 +23,7 @@ class CallingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-//        binding = FragmentCallingBinding.inflate(LayoutInflater.from(context))
-//        var view = binding.root
-////        return inflater.inflate(R.layout.fragment_calling, container, false)
-//        binding.tvDialedNumber.text = arguments?.getString("number")
+
         val binding: FragmentCallingBinding= DataBindingUtil.inflate(
             inflater,
             R.layout.fragment_calling,

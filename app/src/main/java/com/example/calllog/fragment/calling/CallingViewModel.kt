@@ -13,6 +13,6 @@ class CallingViewModel(finalcall : String) : ViewModel() {
 
     init{
         _fcall.value = finalcall
-        Log.i("ScoreViewModel", "Final score is $finalcall")
+//        Log.i("ScoreViewModel", "Final score is $finalcall")
     }
 }
