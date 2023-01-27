@@ -27,6 +27,7 @@ class CallingViewModel(finalcall : String
 ) : ViewModel() {
 
     val _fcall = MutableLiveData<String>()
+    val calended = MutableLiveData<String>()
     val fcall : LiveData<String>
     get() = _fcall
 

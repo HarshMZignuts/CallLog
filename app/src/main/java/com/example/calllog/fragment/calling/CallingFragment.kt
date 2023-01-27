@@ -62,7 +62,7 @@ class CallingFragment : Fragment() {
             binding.tvTimer.stop()
 //            Log.d("afefaf",binding.tvTimer.text.toString())
             var call = Call(0,viewModel.fcall.value.toString(),binding.tvTimer.text.toString())
-
+            viewModel.calended.value = "CallEnded"
             Handler().postDelayed({
                 findNavController().navigate(R.id.action_callingFragment_to_listFragment)
             },2000)

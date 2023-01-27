@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <data
         >
         <variable
@@ -8,10 +10,9 @@
     </data>
 
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
+    android:padding="15dp"
     android:layout_height="100dp">
 
     <ImageView
@@ -29,18 +30,19 @@
         android:id="@+id/tv_number_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
         android:text="@={lviewModel.tv_number_list}"
-        tools:text ="@string/phone_number"
         android:textSize="30sp"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/phone_number" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="36dp"
         android:src="@drawable/ic_baseline_call_made_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_number_list">
@@ -51,12 +53,12 @@
         android:id="@+id/tv_time_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="36dp"
         android:text="@={lviewModel.tv_time_list}"
-        tools:text="@string/timer"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="@string/timer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
