@@ -8,4 +8,5 @@ import androidx.room.PrimaryKey
 data class Call(
     @PrimaryKey(autoGenerate = true)
     var id :Int,
-    val num : String)
+    val num : String,
+    val time : String)

@@ -31,5 +31,8 @@
         <argument
             android:name="dialnumber"
             app:argType="string" />
+        <action
+            android:id="@+id/action_callingFragment_to_listFragment"
+            app:destination="@id/listFragment" />
     </fragment>
 </navigation>

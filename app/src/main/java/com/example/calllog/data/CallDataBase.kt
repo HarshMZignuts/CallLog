@@ -13,7 +13,7 @@ abstract class CallDataBase :RoomDatabase() {
     companion object{
         @Volatile
         private var INSTANCE : CallDataBase? = null
-        fun getDatabase(context: Context) : CallDataBase{
+        fun getDatabase(context: Context): CallDataBase{
             val tempInstance = INSTANCE
             if(tempInstance != null){
                 return tempInstance
