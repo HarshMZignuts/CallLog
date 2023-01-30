@@ -56,8 +56,5 @@ class CalViewModel : ViewModel() {
         }
         return true
     }
-    fun floatintCall()
-    {
-        _callNumber.value = true
-    }
+
 }

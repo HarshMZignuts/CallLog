@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:text="@string/phone"
 
-            android:textSize="30sp"></TextView>
+            android:textSize="30sp"/>
     </LinearLayout>
 
 
