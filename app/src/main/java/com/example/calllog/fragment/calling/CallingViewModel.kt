@@ -40,15 +40,7 @@ public class CallingViewModel(finalcall : String
 
     init{
         _fcall.value = finalcall
-//        repository = CallRepository(callDao)
 
-
-//       serviceIntent = Intent(context,TimerService::class.java)
-
-
-
-
-//        Log.i("ScoreViewModel", "Final score is $finalcall")
     }
     companion object {
 

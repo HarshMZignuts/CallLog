@@ -8,7 +8,7 @@ import androidx.lifecycle.ViewModel
 class CalViewModel : ViewModel() {
     var digit_on_screen = StringBuilder()
 
-    //    @Bindable
+
 
     val tvnumber = MutableLiveData<String>()
     private val _callNumber = MutableLiveData<Boolean>()
