@@ -1,264 +1,273 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".fragment.call.CallFragment">
+
     <data>
-        <import type="android.view.View"/>
+
+        <import type="android.view.View" />
+
         <variable
             name="calViewModel"
             type="com.example.calllog.fragment.call.CalViewModel" />
     </data>
 
-<LinearLayout android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="15dp"
-
-    >
-
-
-
-    <TextView
-        android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-
-        android:layout_marginBottom="20dp"
-        android:text="@={calViewModel.tvnumber}"
-        android:gravity="center"
-        android:singleLine="true"
-
-        android:id="@+id/tv_Dial_Your_Number"
-
-
-
-        android:textSize="40sp" />
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btn_1"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="50dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="@string/b_1"
-            android:onClick="@{()->calViewModel.btnNumber(String.valueOf(1))}"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:theme="@style/White"
-             />
-
-        <Button
-            android:id="@+id/btn_2"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="50dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="@string/b_2"
-            android:onClick="@{()->calViewModel.btnNumber(String.valueOf(2))}"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:theme="@style/White" />
-
-        <Button
-            android:id="@+id/btn_3"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="50dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="@string/b_3"
-            android:onClick="@{()->calViewModel.btnNumber(String.valueOf(3))}"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:theme="@style/White" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btn_4"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="50dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="@string/b_4"
-            android:onClick="@{()->calViewModel.btnNumber(String.valueOf(4))}"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:theme="@style/White" />
-
-        <Button
-            android:id="@+id/btn_5"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="50dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="@string/b_5"
-            android:onClick="@{()->calViewModel.btnNumber(String.valueOf(5))}"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:theme="@style/White" />
-
-        <Button
-            android:id="@+id/btn_6"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="50dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="@string/b_6"
-            android:onClick="@{()->calViewModel.btnNumber(String.valueOf(6))}"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:theme="@style/White" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btn_7"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="50dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="@string/b_7"
-            android:onClick="@{()->calViewModel.btnNumber(String.valueOf(7))}"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:theme="@style/White" />
-
-        <Button
-            android:id="@+id/btn_8"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="50dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="@string/b_8"
-            android:onClick="@{()->calViewModel.btnNumber(String.valueOf(8))}"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:theme="@style/White" />
-
-        <Button
-            android:id="@+id/btn_9"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="50dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="@string/b_9"
-            android:onClick="@{()->calViewModel.btnNumber(String.valueOf(9))}"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:theme="@style/White" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btn_has"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="50dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="@string/b_hase"
-            android:onClick="@{()->calViewModel.btnNumber(@string/b_hase)}"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:theme="@style/White" />
-
-        <Button
-            android:id="@+id/btn_0"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="50dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="@string/b_0"
-            android:onClick="@{()->calViewModel.btnNumber(String.valueOf(0))}"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:theme="@style/White" />
-
-        <Button
-            android:id="@+id/btn_star"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="50dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="@string/b_star"
-            android:onClick="@{()->calViewModel.btnNumber(@string/b_star)}"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:theme="@style/White" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-
-        >
-
-        <ImageButton
-            android:id="@+id/btn_video"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:src="@drawable/ic_baseline_video_call_24"
-
-            android:theme="@style/White"
-            tools:ignore="SpeakableTextPresentCheck"
-            android:contentDescription="@string/video_call" />
-
-        <ImageButton
-            android:id="@+id/btn_back_slash"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:src="@drawable/ic_baseline_backspace_24"
-            android:onClick="@{()->calViewModel.clearDigit()}"
-            android:onLongClick="@{()->calViewModel.onHoldClear()}"
-            android:theme="@style/White"
-            android:contentDescription="@string/remove"
-            tools:ignore="SpeakableTextPresentCheck" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
+        android:padding="15dp"
+
         >
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/call_floating_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
-        android:contentDescription="@string/call"
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+
+            >
+
+            <TextView
+                android:id="@+id/tv_Dial_Your_Number"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:singleLine="true"
 
 
-        android:src="@drawable/ic_baseline_call_24"
-        app:backgroundTint="#85E615"
-        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+                android:text="@={calViewModel.tvnumber}"
+
+
+                android:textSize="40sp" />
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_1"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:onClick="@{()->calViewModel.btnNumber(String.valueOf(1))}"
+                android:text="@string/b_1"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:theme="@style/White" />
+
+            <Button
+                android:id="@+id/btn_2"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:onClick="@{()->calViewModel.btnNumber(String.valueOf(2))}"
+                android:text="@string/b_2"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:theme="@style/White" />
+
+            <Button
+                android:id="@+id/btn_3"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:onClick="@{()->calViewModel.btnNumber(String.valueOf(3))}"
+                android:text="@string/b_3"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:theme="@style/White" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_4"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:onClick="@{()->calViewModel.btnNumber(String.valueOf(4))}"
+                android:text="@string/b_4"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:theme="@style/White" />
+
+            <Button
+                android:id="@+id/btn_5"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:onClick="@{()->calViewModel.btnNumber(String.valueOf(5))}"
+                android:text="@string/b_5"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:theme="@style/White" />
+
+            <Button
+                android:id="@+id/btn_6"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:onClick="@{()->calViewModel.btnNumber(String.valueOf(6))}"
+                android:text="@string/b_6"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:theme="@style/White" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_7"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:onClick="@{()->calViewModel.btnNumber(String.valueOf(7))}"
+                android:text="@string/b_7"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:theme="@style/White" />
+
+            <Button
+                android:id="@+id/btn_8"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:onClick="@{()->calViewModel.btnNumber(String.valueOf(8))}"
+                android:text="@string/b_8"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:theme="@style/White" />
+
+            <Button
+                android:id="@+id/btn_9"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:onClick="@{()->calViewModel.btnNumber(String.valueOf(9))}"
+                android:text="@string/b_9"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:theme="@style/White" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_has"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:onClick="@{()->calViewModel.btnNumber(@string/b_hase)}"
+                android:text="@string/b_hase"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:theme="@style/White" />
+
+            <Button
+                android:id="@+id/btn_0"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:onClick="@{()->calViewModel.btnNumber(String.valueOf(0))}"
+                android:text="@string/b_0"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:theme="@style/White" />
+
+            <Button
+                android:id="@+id/btn_star"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:onClick="@{()->calViewModel.btnNumber(@string/b_star)}"
+                android:text="@string/b_star"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:theme="@style/White" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+            <ImageButton
+                android:id="@+id/btn_video"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/video_call"
+
+                android:src="@drawable/ic_baseline_video_call_24"
+                android:theme="@style/White"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/btn_back_slash"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/remove"
+                android:onClick="@{()->calViewModel.clearDigit()}"
+                android:onLongClick="@{()->calViewModel.onHoldClear()}"
+                android:src="@drawable/ic_baseline_backspace_24"
+                android:theme="@style/White"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/call_floating_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:contentDescription="@string/call"
+
+
+                android:src="@drawable/ic_baseline_call_24"
+                app:backgroundTint="#85E615"
+                tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+        </LinearLayout>
+
+
     </LinearLayout>
-
-
-
-</LinearLayout>
 </layout>
