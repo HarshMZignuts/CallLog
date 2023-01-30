@@ -76,4 +76,10 @@ dependencies {
     implementation "com.google.dagger:hilt-android:2.44.2"
     kapt "com.google.dagger:hilt-compiler:2.44.2"
 
+    implementation "androidx.fragment:fragment-ktx:1.5.5"
+    //
+   // kapt  "android.arch.persistence.room:compiler:$rootProject.2.5.0"
+
+
+
 }

@@ -29,6 +29,8 @@
         android:layout_marginBottom="20dp"
         android:text="@={calViewModel.tvnumber}"
         android:gravity="center"
+        android:singleLine="true"
+
         android:id="@+id/tv_Dial_Your_Number"
 
 

@@ -6,7 +6,7 @@
         >
         <variable
             name="lviewModel"
-            type="com.example.calllog.fragment.list.ListViewModel" />
+            type="com.example.calllog.model.Call" />
     </data>
 
 
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginTop="20dp"
-            android:text="@={lviewModel.tv_number_list}"
+            android:text="@{String.valueOf(lviewModel.num)}"
             android:textSize="30sp"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent"
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="36dp"
-            android:text="@={lviewModel.tv_time_list}"
+            android:text="@{String.valueOf(lviewModel.time)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             tools:text="@string/timer" />

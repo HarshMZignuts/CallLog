@@ -3,7 +3,7 @@ package com.example.calllog.fragment.calling
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
-class CallingViewModelFactory(private val finalnumber : String) : ViewModelProvider.Factory {
+public class CallingViewModelFactory( val finalnumber : String) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(CallingViewModel::class.java)){

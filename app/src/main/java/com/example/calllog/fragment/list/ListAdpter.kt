@@ -20,21 +20,37 @@ class ListAdpter: RecyclerView.Adapter<ListAdpter.MyViewHolder>(){
     private var callList = emptyList<Call>()
 
 
-    class MyViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
+    class MyViewHolder(
+        private val binding: CustomListBinding)
+        :RecyclerView.ViewHolder(binding.root){
 
+        fun bind(currentItem : Call){
+           binding.lviewModel = currentItem
+        }
+        companion object{
+            fun from(parent: ViewGroup):MyViewHolder{
+                val layoutInflater = LayoutInflater.from(parent.context)
+                val binding = CustomListBinding.inflate(layoutInflater,parent,false)
+                return MyViewHolder(binding)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
-        return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.custom_list,parent,false))
+        return MyViewHolder.from(parent)
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-       val currenItem = callList[position]
+       //val currenItem = callList[position]
+       val currenItem = callList.getOrNull(position)
 
+        currenItem?.let {
+            holder.bind(it)
+        }
 
-        holder.itemView.findViewById<TextView>(R.id.tv_number_list).text = currenItem.num
-        holder.itemView.findViewById<TextView>(R.id.tv_time_list).text = currenItem.time
+//        holder.itemView.findViewById<TextView>(R.id.tv_number_list).text = currenItem?.num
+//        holder.itemView.findViewById<TextView>(R.id.tv_time_list).text = currenItem?.time
     }
 
     override fun getItemCount(): Int {
@@ -49,6 +65,7 @@ fun setData(call : List<Call>) {
     callList = call
     diffResult.dispatchUpdatesTo(this)
 }
+
 
 
 }

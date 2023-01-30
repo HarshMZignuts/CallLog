@@ -8,9 +8,15 @@ import android.icu.text.UnicodeSetSpanner.CountMethod
 import android.os.CountDownTimer
 import android.os.IBinder
 import android.os.SystemClock
+import android.provider.CallLog
+import android.text.Editable.Factory
 import android.text.format.DateUtils
 import android.util.Log
 import androidx.lifecycle.*
+import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory.Companion.APPLICATION_KEY
+import androidx.lifecycle.viewmodel.CreationExtras
+import androidx.lifecycle.viewmodel.initializer
+import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.calllog.data.CallDataBase
 import com.example.calllog.model.Call
 import com.example.calllog.repository.CallRepository
@@ -23,7 +29,7 @@ import java.util.TimerTask
 import javax.inject.Inject
 
 
-class CallingViewModel(finalcall : String
+public class CallingViewModel(finalcall : String
 ) : ViewModel() {
 
     val _fcall = MutableLiveData<String>()
@@ -44,8 +50,10 @@ class CallingViewModel(finalcall : String
 
 //        Log.i("ScoreViewModel", "Final score is $finalcall")
     }
+    companion object {
 
 
+    }
 }
 
 

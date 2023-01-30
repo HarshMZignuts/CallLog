@@ -10,6 +10,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModel
 
 import androidx.lifecycle.ViewModelProvider
 
@@ -23,14 +25,14 @@ class CallFragment : Fragment() {
 
     private lateinit var binding: FragmentCallBinding
 //    var digit_on_screen = StringBuilder()
-    private lateinit var viewModel : CalViewModel
+    private val viewModel : CalViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        viewModel = ViewModelProvider(this)[CalViewModel::class.java]
+
 
         binding = DataBindingUtil.inflate(
             inflater,

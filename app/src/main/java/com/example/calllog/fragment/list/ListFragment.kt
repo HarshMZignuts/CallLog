@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 
 import androidx.lifecycle.ViewModelProvider
 
@@ -17,7 +18,7 @@ import com.example.calllog.viewmodel.CallViewModel
 
 class ListFragment : Fragment() {
 
-    private lateinit var mcallViewModel : CallViewModel
+    private  val mcallViewModel : CallViewModel by viewModels()
     private lateinit var binding: FragmentListBinding
     private val adpter = ListAdpter()
 
@@ -31,7 +32,7 @@ class ListFragment : Fragment() {
         val recyclerView = binding.recyclerview
         recyclerView.adapter = adpter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        mcallViewModel = ViewModelProvider(this)[CallViewModel::class.java]
+        //mcallViewModel = ViewModelProvider(this)[CallViewModel::class.java]
         mcallViewModel.readAllData.observe(viewLifecycleOwner) { call ->
             adpter.setData(call)
         }
