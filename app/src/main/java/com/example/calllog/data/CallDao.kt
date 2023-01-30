@@ -12,6 +12,6 @@ interface CallDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addCall(call: Call)
 
-    @Query("SELECT * FROM call_table")
+    @Query("SELECT * FROM call_table Order By id Desc")
     fun readAllData() : LiveData<List<Call>>
 }
